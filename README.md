@@ -1,7 +1,7 @@
 # LBP_Trades
 LBP Trades Accounting System
 
-INSTALLATION
+INSTALLATION/REQUIREMENTS
 
 -MySQL 8.0
 
