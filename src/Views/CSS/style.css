@@ -1,0 +1,106 @@
+.jfx-progress-bar > .bar,
+.jfx-progress-bar:indeterminate > .bar{
+    -fx-background-color: #1976d2;
+    -fx-padding: 1.5;
+}
+
+.jfx-tree-table-view {
+    -fx-tree-table-color: rgba(82, 100, 174, 0.4);
+    -fx-tree-table-rippler-color: rgba(82, 100, 174, 0.6);
+    -jfx-header-color: GRAY;
+}
+
+.tree-table-view .column-header {
+    -fx-font-family: "Gill Sans MT";
+    -fx-font-size: 14;
+}
+
+.tree-table-view {
+    -fx-font-size: 14;
+}
+
+.jfx-tree-table-view .tree-table-cell {
+    -fx-border-width: 0 0 0 0;
+    -fx-pref-height: 48px;
+    -fx-alignment: center-left;
+}
+
+.jfx-tree-table-view .column-header .label {
+    -fx-text-fill: -jfx-header-color;
+    -fx-padding: 10 0 10 0;
+}
+
+.tab {
+    -fx-background-color: #eceff1;
+    -fx-pref-width: 200;
+    -fx-pref-height: 45;
+}
+
+.tab-header-background {
+    -fx-background-color: #eceff1;
+}
+
+.tab-label {
+    /*-fx-text-fill: -fx-secondary;*/
+    -fx-font-size: 10pt;
+}
+
+.tab-main{
+    -fx-pref-height : 30;
+    -fx-max-height : 30;
+    -fx-pref-width: 50;
+    -fx-max-width : 50;
+}
+
+/*tab-pane*/
+.jfx-tab-pane .tab-header-area .tab-down-button {
+    -fx-background-color: #b5b5b5;
+    -fx-min-width: 0.8em;
+    -fx-max-width: 0.8em;
+    -fx-min-height: 1.3em;
+    -fx-max-height: 1.3em;
+}
+
+.jfx-tab-pane .tab-header-area .control-buttons-tab .jfx-rippler {
+    -jfx-rippler-fill: #b5b5b5;
+}
+
+.jfx-tab-pane .headers-region > .tab > .jfx-rippler {
+    -jfx-rippler-fill: #62727b;
+}
+
+.jfx-tab-pane .headers-region .tab-selected-line {
+    -fx-background-color: #1976d2;
+}
+
+.jfx-tab-pane .headers-region .tab .tab-container .tab-label {
+    -fx-text-fill: #aeaeae;
+    -fx-font-weight: BOLD;
+    -fx-padding: 3 5 3 5;
+    -fx-font-size: 15;
+}
+
+.jfx-tab-pane .headers-region .tab:selected .tab-container .tab-label {
+    -fx-text-fill: #8d8d8d;
+}
+
+.jfx-text-field {
+    -fx-prompt-text-fill: #8d8d8d;
+}
+
+.jfx-combo-box {
+    -fx-font-size: 13px;
+    -fx-font-family: "System";
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: #e0e0e0;
+}

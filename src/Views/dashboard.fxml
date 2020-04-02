@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: TRANSPARENT;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.dashboardController">
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-radius: 30px; -fx-background-color: #eceff1;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <top>
+            <AnchorPane prefHeight="56.0" prefWidth="1190.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30 30 0 0;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="160.0" layoutX="6.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logo_160x80.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="SEARCH" focusTraversable="false" layoutX="464.0" layoutY="28.0" prefHeight="28.0" prefWidth="262.0" promptText="Search Client.." style="-fx-background-radius: 20px;" AnchorPane.leftAnchor="464.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <JFXButton fx:id="CLOSE" contentDisplay="GRAPHIC_ONLY" ellipsisString="" focusTraversable="false" layoutX="1124.0" layoutY="27.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#setClose" prefHeight="30.0" prefWidth="30.0" text="Button" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="25.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/close_window_30px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="MAX" contentDisplay="GRAPHIC_ONLY" ellipsisString="" focusTraversable="false" layoutX="1085.0" layoutY="27.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#setMax" prefHeight="30.0" prefWidth="30.0" text="Button" visible="false" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="27.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/health_data_30px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="MIN" contentDisplay="GRAPHIC_ONLY" ellipsisString="" focusTraversable="false" layoutX="1046.0" layoutY="27.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#setMin" prefHeight="30.0" prefWidth="30.0" text="Button" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="25.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/minimize_window_30px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="432.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="432.0" AnchorPane.topAnchor="26.0">
+                     <image>
+                        <Image url="@images/search_client_30px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="610.0" prefWidth="310.0" style="-fx-background-color: #1976d2; -fx-background-radius: 0 80 0 30;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXTreeTableView fx:id="CLIENTS_TBL" focusTraversable="false" layoutX="14.0" layoutY="40.0" prefHeight="560.0" prefWidth="263.0" style="-fx-background-radius: 0 0 0 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+                     <columns>
+                        <TreeTableColumn fx:id="COL_ID" style="-fx-background-radius: 10 0 0 0;" text="Client No." />
+                        <TreeTableColumn fx:id="COL_FULL_NAME" prefWidth="199.0" style="-fx-background-radius: 0 10 0 0;" text="Client Full name" />
+                     </columns>
+                  </JFXTreeTableView>
+                  <JFXButton fx:id="ADD_CLIENT" layoutX="14.0" layoutY="40.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="167.0" style="-fx-background-color: WHITE; -fx-background-radius: 30px;" text="Add New Client" textFill="#1976d2" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="129.0">
+                     <font>
+                        <Font name="Gill Sans MT" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/add_new_25px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <JFXTabPane BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab text="Short Term">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-background-radius: 0 0 30 0;">
+                           <children>
+                              <JFXTreeTableView fx:id="SHORT_TERM_TBL" prefHeight="520.0" prefWidth="863.0" style="-fx-background-radius: 0 0 30 0;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0">
+                                 <columns>
+                                    <TreeTableColumn prefWidth="272.0" text="Deposit">
+                                       <columns>
+                                          <TreeTableColumn prefWidth="130.0" text="Amount" />
+                                          <TreeTableColumn minWidth="0.0" prefWidth="130.0" text="Date" />
+                                       </columns>
+                                    </TreeTableColumn>
+                                    <TreeTableColumn prefWidth="471.0" text="Dividends">
+                                       <columns>
+                                          <TreeTableColumn text="Gross " />
+                                          <TreeTableColumn minWidth="0.0" prefWidth="55.0" text="\%" />
+                                          <TreeTableColumn minWidth="0.0" prefWidth="100.0" text="Less 10%" />
+                                          <TreeTableColumn minWidth="0.0" prefWidth="100.0" text="Net Income" />
+                                          <TreeTableColumn minWidth="0.0" prefWidth="115.0" text="Withdraw Date" />
+                                       </columns>
+                                    </TreeTableColumn>
+                                    <TreeTableColumn prefWidth="149.0" text="Balance" />
+                                 </columns></JFXTreeTableView>
+                              <JFXTextField focusColor="#1976d2" layoutX="679.0" layoutY="12.0" prefHeight="29.0" prefWidth="222.0" promptText="Search Details.." unFocusColor="#8d8d8d" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="10.0">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="613.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="242.0" AnchorPane.topAnchor="13.0">
+                                 <image>
+                                    <Image url="@images/search_property_30px.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXComboBox fx:id="MONTH_SHORT" focusColor="#1976d2" focusTraversable="false" layoutX="12.0" layoutY="9.0" prefHeight="30.0" prefWidth="110.0" promptText="Month" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                              <JFXComboBox fx:id="YEAR_SHORT" focusColor="#1976d2" focusTraversable="false" layoutX="135.0" layoutY="11.0" prefHeight="30.0" prefWidth="95.0" promptText="Year" AnchorPane.leftAnchor="135.0" AnchorPane.topAnchor="10.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Medium Term">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXTreeTableView fx:id="MEDIUM_TERM_TBL" prefHeight="520.0" prefWidth="863.0" style="-fx-background-radius: 0 0 30 0;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0">
+                                 <columns>
+                                    <TreeTableColumn prefWidth="301.0" text="Deposit">
+                                       <columns>
+                                          <TreeTableColumn prefWidth="130.0" text="Amount" />
+                                          <TreeTableColumn minWidth="0.0" prefWidth="130.0" text="Date" />
+                                       </columns>
+                                    </TreeTableColumn>
+                                    <TreeTableColumn prefWidth="480.0" text="Dividends">
+                                       <columns>
+                                          <TreeTableColumn text="Gross " />
+                                          <TreeTableColumn minWidth="0.0" prefWidth="55.0" text="\%" />
+                                          <TreeTableColumn minWidth="0.0" prefWidth="100.0" text="Less 10%" />
+                                          <TreeTableColumn minWidth="0.0" prefWidth="100.0" text="Net Income" />
+                                          <TreeTableColumn minWidth="0.0" prefWidth="115.0" text="Withdraw Date" />
+                                       </columns>
+                                    </TreeTableColumn>
+                                    <TreeTableColumn prefWidth="149.0" text="Balance" />
+                                 </columns>
+                              </JFXTreeTableView>
+                              <JFXComboBox fx:id="MONTH_MEDIUM" focusColor="#1976d2" focusTraversable="false" layoutX="10.0" layoutY="14.0" prefHeight="30.0" prefWidth="110.0" promptText="Month" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                              <JFXTextField focusColor="#1976d2" layoutX="647.0" layoutY="14.0" prefHeight="29.0" prefWidth="222.0" promptText="Search Details.." unFocusColor="#8d8d8d" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="10.0">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="614.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="242.0" AnchorPane.topAnchor="13.0">
+                                 <image>
+                                    <Image url="@images/search_property_30px.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXComboBox fx:id="YEAR_MEDIUM" focusColor="#1976d2" focusTraversable="false" layoutX="129.0" layoutY="11.0" prefHeight="30.0" prefWidth="95.0" promptText="Year" AnchorPane.leftAnchor="135.0" AnchorPane.topAnchor="10.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Long Term">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXComboBox fx:id="MONTH_LONG" focusColor="#1976d2" focusTraversable="false" layoutX="14.0" layoutY="-1.0" prefHeight="30.0" prefWidth="110.0" promptText="Month" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                              <JFXTextField focusColor="#1976d2" layoutX="647.0" layoutY="16.0" prefHeight="29.0" prefWidth="222.0" promptText="Search Details.." unFocusColor="#8d8d8d" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="10.0">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="614.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="242.0" AnchorPane.topAnchor="13.0">
+                                 <image>
+                                    <Image url="@images/search_property_30px.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXTreeTableView fx:id="LONG_TERM_TBL" prefHeight="520.0" prefWidth="863.0" style="-fx-background-radius: 0 0 30 0;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0">
+                                 <columns>
+                                    <TreeTableColumn prefWidth="301.0" text="Deposit">
+                                       <columns>
+                                          <TreeTableColumn prefWidth="130.0" text="Amount" />
+                                          <TreeTableColumn minWidth="0.0" prefWidth="130.0" text="Date" />
+                                       </columns>
+                                    </TreeTableColumn>
+                                    <TreeTableColumn prefWidth="480.0" text="Dividends">
+                                       <columns>
+                                          <TreeTableColumn text="Gross " />
+                                          <TreeTableColumn minWidth="0.0" prefWidth="55.0" text="\%" />
+                                          <TreeTableColumn minWidth="0.0" prefWidth="100.0" text="Less 10%" />
+                                          <TreeTableColumn minWidth="0.0" prefWidth="100.0" text="Net Income" />
+                                          <TreeTableColumn minWidth="0.0" prefWidth="115.0" text="Withdraw Date" />
+                                       </columns>
+                                    </TreeTableColumn>
+                                    <TreeTableColumn prefWidth="149.0" text="Balance" />
+                                 </columns>
+                              </JFXTreeTableView>
+                              <JFXComboBox fx:id="YEAR_LONG" focusColor="#1976d2" focusTraversable="false" layoutX="140.0" layoutY="11.0" prefHeight="30.0" prefWidth="95.0" promptText="Year" AnchorPane.leftAnchor="135.0" AnchorPane.topAnchor="10.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="8K-Module">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1041.0">
+                           <children>
+                              <JFXComboBox fx:id="MONTH_8K" focusColor="#1976d2" focusTraversable="false" prefHeight="30.0" prefWidth="110.0" promptText="Month" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                              <JFXTextField focusColor="#1976d2" prefHeight="29.0" prefWidth="218.0" promptText="Search Details.." unFocusColor="#8d8d8d" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="612.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="242.0" AnchorPane.topAnchor="13.0">
+                                 <image>
+                                    <Image url="@images/search_property_30px.png" />
+                                 </image>
+                              </ImageView>
+                              <ScrollPane layoutX="10.0" layoutY="50.0" prefWidth="863.0" style="-fx-background-radius: 0 0 30 0;" vbarPolicy="NEVER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="45.0">
+                                 <content>
+                                    <JFXTreeTableView fx:id="_8K_MODULE_TBL" minHeight="505.0">
+                                       <columns>
+                                          <TreeTableColumn prefWidth="301.0" text="Deposit">
+                                             <columns>
+                                                <TreeTableColumn prefWidth="130.0" text="Amount" />
+                                                <TreeTableColumn minWidth="0.0" prefWidth="144.0" text="Date" />
+                                             </columns>
+                                          </TreeTableColumn>
+                                          <TreeTableColumn prefWidth="311.0" text="Dividends">
+                                             <columns>
+                                                <TreeTableColumn prefWidth="130.0" text="Cash Advance" />
+                                                <TreeTableColumn minWidth="0.0" prefWidth="130.0" text="15th of the Month" />
+                                                <TreeTableColumn minWidth="0.0" prefWidth="145.0" text="30/31st of the Month" />
+                                                <TreeTableColumn minWidth="0.0" prefWidth="130.0" text="Net Income" />
+                                             </columns>
+                                          </TreeTableColumn>
+                                          <TreeTableColumn prefWidth="301.0" text="Withdrawal Date">
+                                             <columns>
+                                                <TreeTableColumn minWidth="0.0" prefWidth="130.0" text="15th" />
+                                                <TreeTableColumn minWidth="0.0" prefWidth="130.0" text="30th/31st" />
+                                             </columns>
+                                          </TreeTableColumn>
+                                          <TreeTableColumn prefWidth="140.0" text="Balance" />
+                                       </columns>
+                                    </JFXTreeTableView>
+                                 </content>
+                              </ScrollPane>
+                              <JFXComboBox fx:id="YEAR_8K" focusColor="#1976d2" focusTraversable="false" prefHeight="30.0" prefWidth="95.0" promptText="Year" AnchorPane.leftAnchor="135.0" AnchorPane.topAnchor="10.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

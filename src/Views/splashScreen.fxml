@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="580.0" style="-fx-background-color: TRANSPARENT;" stylesheets="@CSS/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.splashScreenController">
+   <children>
+      <AnchorPane layoutX="15.0" layoutY="15.0" prefHeight="350.0" prefWidth="550.0" style="-fx-background-radius: 30px; -fx-background-color: #e0e0e0;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <JFXProgressBar fx:id="progress_bar" layoutX="102.0" layoutY="320.0" prefHeight="5.0" prefWidth="346.0" visible="false" />
+            <Label fx:id="loading_lbl" alignment="CENTER" layoutX="203.0" layoutY="256.0" prefHeight="33.0" prefWidth="145.0" text="LOADING" visible="false">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="loading_lbl2" alignment="CENTER" layoutX="214.0" layoutY="289.0" prefHeight="24.0" prefWidth="124.0" text="Please Wait..." visible="false">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="logoView" contentDisplay="GRAPHIC_ONLY" layoutX="63.0" layoutY="40.0">
+               <graphic>
+                  <ImageView fitHeight="216.0" fitWidth="425.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/lbp_trades_logo425x215px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
